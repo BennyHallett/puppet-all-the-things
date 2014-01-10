@@ -1,3 +1,4 @@
 node default {
-  include git 
+  include git
+  include ruby
 }
