@@ -3,4 +3,5 @@ node default {
   include ruby
   include chrome
   include couchdb
+  include gimp
 }
