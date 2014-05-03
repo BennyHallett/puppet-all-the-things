@@ -7,6 +7,7 @@ node default {
   include keepassx
   include vim
 
+  include nodejs
   include rvm
   rvm::system_user { benny: ; }
   rvm_system_ruby {
