@@ -1,2 +1,2 @@
 #!/bin/bash
-puppet apply --modulepath=./modules manifests/site.pp
+sudo puppet apply --modulepath=./modules manifests/site.pp
