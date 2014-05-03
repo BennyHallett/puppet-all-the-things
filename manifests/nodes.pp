@@ -5,6 +5,7 @@ node default {
   include hosts
   include dotfiles
   include keepassx
+  include vim
 
   include rvm
   rvm::system_user { benny: ; }
