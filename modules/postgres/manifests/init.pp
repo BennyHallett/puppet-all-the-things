@@ -5,4 +5,7 @@ class postgres {
   package { 'postgresql-contrib':
     ensure => present
   }
+  package { 'libpq-dev':
+    ensure => present
+  }
 }
