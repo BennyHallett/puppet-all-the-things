@@ -6,9 +6,15 @@ node default {
   include dotfiles
   include keepassx
   include vim
+  include postgres
 
   include nodejs
   include rvm
+
+  #class { 'pathogen':
+  #  user_home => '/home/benny'
+  #}
+
   rvm::system_user { benny: ; }
   rvm_system_ruby {
     'ruby-2.1.0':
