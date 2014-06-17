@@ -30,6 +30,13 @@ node default {
     pluginrepositories => ['http://dist.springsource.com/release/TOOLS/gradle']
   }
 
+  wget::fetch { "libgdx setup":
+    source      => 'https://bitly.com/1i3C7i3'
+    destination => '/opt/gdx-setup.jar',
+    timeout     => 0,
+    verbose     => false,
+  }
+
   include android
 
   android::platform { 'android-16': }
