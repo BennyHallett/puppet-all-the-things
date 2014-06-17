@@ -20,10 +20,7 @@ node default {
     version      => 'present'
   }
 
-  eclipse { 'eclipse':
-    downloadurl   => 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/eclipse-java-kepler-SR2-linux-gtk-x86_64.tar.gz&mirror_id=1051',
-    downloadfile  => 'eclipse-java-kepler-SR2-linux-gtk-x86_64.tar.gz'
-  }
+  eclipse { 'eclipse': }
 
   eclipse::plugin { 'eclipse-adt':
     pluginrepositories => ['https://dl-ssl.google.com/android/eclipse/', 'http://download.eclipse.org/releases/kepler/']
