@@ -15,6 +15,28 @@ node default {
   #  user_home => '/home/benny'
   #}
 
+  class { 'java':
+    distribution => 'jdk',
+    version      => 'present'
+  }
+
+  eclipse { 'eclipse':
+    downloadurl   => 'http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/SR2/eclipse-java-kepler-SR2-linux-gtk-x86_64.tar.gz&mirror_id=1051',
+    downloadfile  => 'eclipse-java-kepler-SR2-linux-gtk-x86_64.tar.gz'
+  }
+
+  eclipse::plugin { 'eclipse-adt':
+    pluginrepositories => ['https://dl-ssl.google.com/android/eclipse/', 'http://download.eclipse.org/releases/kepler/']
+  }
+
+  eclipse::plugin { 'gradle':
+    pluginrepositories => ['http://dist.springsource.com/release/TOOLS/gradle']
+  }
+
+  include android
+
+  android::platform { 'android-16': }
+
   rvm::system_user { benny: ; }
   rvm_system_ruby {
     'ruby-2.1.0':
