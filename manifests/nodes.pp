@@ -31,7 +31,7 @@ node default {
   }
 
   wget::fetch { "libgdx setup":
-    source      => 'https://bitly.com/1i3C7i3'
+    source      => 'https://bitly.com/1i3C7i3',
     destination => '/opt/gdx-setup.jar',
     timeout     => 0,
     verbose     => false,
@@ -39,7 +39,7 @@ node default {
 
   include android
 
-  android::platform { 'android-16': }
+  android::platform { 'android-19': }
 
   rvm::system_user { benny: ; }
   rvm_system_ruby {
